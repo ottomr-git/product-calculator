@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>產品計算機 — RIMAN 力曼</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="brand-badge">RIMAN</div>
+      <h1>產品計算機</h1>
+      <p class="subtitle">選擇產品與數量，快速計算總金額</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="product-sections" id="product-sections"></div>
+  </main>
+
+  <!-- 底部總計列 -->
+  <footer class="summary-bar" id="summary-bar">
+    <div class="summary-content">
+      <div class="summary-left">
+        <span class="summary-count" id="summary-count">已選 0 項</span>
+      </div>
+      <div class="summary-right">
+        <span class="summary-total" id="summary-total">NT$ 0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 明細彈窗 -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h2>選購明細</h2>
+        <button class="modal-close" onclick="closeModal()">&#10005;</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-footer" id="modal-footer"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
