@@ -187,11 +187,30 @@ h1 {
 }
 
 .product-spbp {
+  display: inline;
   font-size: 11px;
   font-weight: 400;
-  color: var(--gold);
-  opacity: 0.8;
-  margin-top: 2px;
+  color: #bbb;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.spbp-sep {
+  font-size: 9px;
+  vertical-align: middle;
+}
+
+.modal-footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.modal-footer-spbp {
+  font-size: 11px;
+  font-weight: 400;
+  color: #bbb;
 }
 
 .product-price-note {

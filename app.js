@@ -85,13 +85,13 @@ function renderProductRow(p) {
   return `
     <div class="product-row" id="row-${p.id}">
       <div class="product-info">
-        <div class="product-name">${p.name}</div>
+        <div class="product-name">
+          ${p.name}
+          <span class="product-spbp">SP ${p.sp} <span class="spbp-sep">/</span> BP ${p.bp}</span>
+        </div>
         <div class="product-spec">${p.spec}</div>
       </div>
-      <div class="product-price">
-        NT$ ${p.price.toLocaleString()}
-        <div class="product-spbp">SP ${p.sp} · BP ${p.bp}</div>
-      </div>
+      <div class="product-price">NT$ ${p.price.toLocaleString()}</div>
       <div class="qty-control">
         <button class="qty-btn minus" onclick="changeQty('${p.id}', -1)">&#8722;</button>
         <div class="qty-value" id="qty-${p.id}">0</div>
@@ -148,6 +148,8 @@ function updateSummary() {
 function openModal() {
   const selected = [];
   let total = 0;
+  let totalSP = 0;
+  let totalBP = 0;
 
   BRANDS.forEach(brand => {
     brand.products.forEach(p => {
@@ -155,7 +157,9 @@ function openModal() {
       if (qty > 0) {
         const subtotal = qty * p.price;
         total += subtotal;
-        selected.push({ name: p.name, qty, price: p.price, subtotal });
+        totalSP += qty * p.sp;
+        totalBP += qty * p.bp;
+        selected.push({ name: p.name, qty, price: p.price, sp: p.sp, bp: p.bp, subtotal });
       }
     });
   });
@@ -177,7 +181,10 @@ function openModal() {
 
   document.getElementById('modal-footer').innerHTML = `
     <span class="modal-footer-label">合計</span>
-    <span class="modal-footer-total">NT$ ${total.toLocaleString()}</span>
+    <div class="modal-footer-right">
+      <span class="modal-footer-total">NT$ ${total.toLocaleString()}</span>
+      <span class="modal-footer-spbp">SP ${totalSP} <span class="spbp-sep">/</span> BP ${totalBP}</span>
+    </div>
   `;
 
   document.getElementById('modal-overlay').classList.add('active');
