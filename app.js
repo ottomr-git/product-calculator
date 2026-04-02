@@ -165,8 +165,11 @@ function openModal() {
   });
 
   const body = document.getElementById('modal-body');
+  const spbpRow = document.getElementById('modal-spbp-row');
+
   if (selected.length === 0) {
     body.innerHTML = '<p style="text-align:center;color:#888;padding:24px 0;">尚未選擇任何產品</p>';
+    spbpRow.style.display = 'none';
   } else {
     body.innerHTML = selected.map(item => `
       <div class="modal-item">
@@ -176,11 +179,11 @@ function openModal() {
         </div>
         <div class="modal-item-subtotal">NT$ ${item.subtotal.toLocaleString()}</div>
       </div>
-    `).join('') + `
-      <div class="modal-spbp-row">
-        <span class="modal-spbp-label">累計點數</span>
-        <span class="modal-spbp-value">SP ${totalSP} <span class="spbp-sep">/</span> BP ${totalBP}</span>
-      </div>
+    `).join('');
+    spbpRow.style.display = 'flex';
+    spbpRow.innerHTML = `
+      <span class="modal-spbp-label">累計點數</span>
+      <span class="modal-spbp-value">SP ${totalSP} / BP ${totalBP}</span>
     `;
   }
 
