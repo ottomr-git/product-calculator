@@ -183,7 +183,7 @@ function openModal() {
     <span class="modal-footer-label">合計</span>
     <div class="modal-footer-right">
       <span class="modal-footer-total">NT$ ${total.toLocaleString()}</span>
-      <span class="modal-footer-spbp">SP ${totalSP} <span class="spbp-sep">/</span> BP ${totalBP}</span>
+      <span class="modal-footer-spbp" style="color:red;font-size:14px;">SP ${totalSP} / BP ${totalBP}</span>
     </div>
   `;
 
