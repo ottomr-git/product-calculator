@@ -176,12 +176,16 @@ function openModal() {
         </div>
         <div class="modal-item-subtotal">NT$ ${item.subtotal.toLocaleString()}</div>
       </div>
-    `).join('');
+    `).join('') + `
+      <div class="modal-spbp-row">
+        <span class="modal-spbp-label">累計點數</span>
+        <span class="modal-spbp-value">SP ${totalSP} <span class="spbp-sep">/</span> BP ${totalBP}</span>
+      </div>
+    `;
   }
 
   document.getElementById('modal-footer').innerHTML = `
     <span class="modal-footer-label">合計</span>
-    <span class="modal-footer-spbp">SP ${totalSP} <span class="spbp-sep">/</span> BP ${totalBP}</span>
     <span class="modal-footer-total">NT$ ${total.toLocaleString()}</span>
   `;
 
