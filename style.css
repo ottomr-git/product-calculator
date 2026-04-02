@@ -183,6 +183,15 @@ h1 {
   color: var(--gold);
   margin-right: 16px;
   white-space: nowrap;
+  text-align: right;
+}
+
+.product-spbp {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--gold);
+  opacity: 0.8;
+  margin-top: 2px;
 }
 
 .product-price-note {

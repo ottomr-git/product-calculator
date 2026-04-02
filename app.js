@@ -4,47 +4,47 @@ const BRANDS = [
     id: "icd",
     name: "ICD 映皙美",
     products: [
-      { id: "icd-cleansing-oil", name: "淨膚卸妝油", spec: "145ml", price: 990 },
-      { id: "icd-cleansing-powder", name: "活膚潔顏粉", spec: "80g", price: 990 },
-      { id: "icd-gel-cleanser", name: "平衡潔顏凝膠", spec: "120g", price: 960 },
-      { id: "icd-calming-gel", name: "舒緩平衡凝露", spec: "100ml", price: 1160 },
-      { id: "icd-oil-mist", name: "油水平衡噴霧", spec: "50ml", price: 1160 },
-      { id: "icd-multi-stick", name: "亮采全能精華棒", spec: "8.5g", price: 790 },
-      { id: "icd-derma-set", name: "活妍專科保養組", spec: "噴霧130ml+精華45ml", price: 2980 },
-      { id: "icd-derma-cream", name: "活妍奇肌霜", spec: "50ml", price: 1980 },
-      { id: "icd-r100-toner", name: "光點100精華水", spec: "100ml", price: 2650 },
-      { id: "icd-r100-ampoule", name: "光點100精華", spec: "50ml", price: 3970 },
-      { id: "icd-r100-cream", name: "光點100乳霜", spec: "50ml", price: 3300 },
-      { id: "icd-collagen-mask", name: "膠原100瞬透水面膜", spec: "2.5g x 6包", price: 1980 },
-      { id: "icd-sunscreen", name: "極效保濕防曬乳 SPF50+", spec: "50ml", price: 830 },
-      { id: "icd-bb-cream", name: "輕透光感BB霜", spec: "30g", price: 830 },
-      { id: "icd-cushion-21", name: "水光保濕氣墊粉餅 #21淺膚", spec: "15g x 2", price: 1800 },
-      { id: "icd-cushion-23", name: "水光保濕氣墊粉餅 #23自然", spec: "15g x 2", price: 1800 },
-      { id: "icd-setting-spray", name: "定妝噴霧", spec: "80ml", price: 960 },
-      { id: "icd-lip-oil", name: "水光潤唇釉", spec: "4.5g", price: 890 },
-      { id: "icd-butter-lip-semi", name: "奶油柔潤唇彩", spec: "4.5g", price: 890 },
-      { id: "icd-butter-lip-velvet", name: "奶油柔霧唇彩", spec: "4.5g", price: 890 },
+      { id: "icd-cleansing-oil",      name: "淨膚卸妝油",          spec: "145ml",          price: 990,  sp: 27,  bp: 21 },
+      { id: "icd-cleansing-powder",   name: "活膚潔顏粉",          spec: "80g",            price: 990,  sp: 27,  bp: 21 },
+      { id: "icd-gel-cleanser",       name: "平衡潔顏凝膠",        spec: "120g",           price: 960,  sp: 26,  bp: 17 },
+      { id: "icd-calming-gel",        name: "舒緩平衡凝露",        spec: "100ml",          price: 1160, sp: 32,  bp: 24 },
+      { id: "icd-oil-mist",           name: "油水平衡噴霧",        spec: "50ml",           price: 1160, sp: 32,  bp: 24 },
+      { id: "icd-multi-stick",        name: "亮采全能精華棒",      spec: "8.5g",           price: 790,  sp: 23,  bp: 17 },
+      { id: "icd-derma-set",          name: "活妍專科保養組",      spec: "噴霧130ml+精華45ml", price: 2980, sp: 81, bp: 63 },
+      { id: "icd-derma-cream",        name: "活妍奇肌霜",          spec: "50ml",           price: 1980, sp: 54,  bp: 42 },
+      { id: "icd-r100-toner",         name: "光點100精華水",       spec: "100ml",          price: 2650, sp: 72,  bp: 48 },
+      { id: "icd-r100-ampoule",       name: "光點100精華",         spec: "50ml",           price: 3970, sp: 108, bp: 72 },
+      { id: "icd-r100-cream",         name: "光點100乳霜",         spec: "50ml",           price: 3300, sp: 90,  bp: 60 },
+      { id: "icd-collagen-mask",      name: "膠原100瞬透水面膜",  spec: "2.5g x 6包",     price: 1980, sp: 54,  bp: 42 },
+      { id: "icd-sunscreen",          name: "極效保濕防曬乳 SPF50+", spec: "50ml",         price: 830,  sp: 23,  bp: 18 },
+      { id: "icd-bb-cream",           name: "輕透光感BB霜",        spec: "30g",            price: 830,  sp: 23,  bp: 18 },
+      { id: "icd-cushion-21",         name: "水光保濕氣墊粉餅 #21淺膚", spec: "15g x 2",  price: 1800, sp: 50,  bp: 38 },
+      { id: "icd-cushion-23",         name: "水光保濕氣墊粉餅 #23自然", spec: "15g x 2",  price: 1800, sp: 50,  bp: 38 },
+      { id: "icd-setting-spray",      name: "定妝噴霧",            spec: "80ml",           price: 960,  sp: 26,  bp: 20 },
+      { id: "icd-lip-oil",            name: "水光潤唇釉",          spec: "4.5g",           price: 890,  sp: 24,  bp: 18 },
+      { id: "icd-butter-lip-semi",    name: "奶油柔潤唇彩",        spec: "4.5g",           price: 890,  sp: 24,  bp: 18 },
+      { id: "icd-butter-lip-velvet",  name: "奶油柔霧唇彩",        spec: "4.5g",           price: 890,  sp: 24,  bp: 18 },
     ]
   },
   {
     id: "botalab",
     name: "博萃瓶 BOTALAB",
     products: [
-      { id: "botalab-shampoo", name: "絲蔻植護洗髮露", spec: "500ml", price: 1090 },
-      { id: "botalab-conditioner", name: "絲蔻植護養髮液", spec: "300ml", price: 890 },
-      { id: "botalab-hair-oil", name: "絲蔻植護魔髮精油", spec: "100ml", price: 1160 },
-      { id: "botalab-body-wash", name: "秀魅淨潤沐浴露", spec: "500ml", price: 990 },
-      { id: "botalab-body-cream", name: "秀魅柔潤身體乳", spec: "250ml", price: 860 },
-      { id: "botalab-feminine-wash", name: "秀魅私密植淨慕斯", spec: "150ml", price: 830 },
+      { id: "botalab-shampoo",        name: "絲蔻植護洗髮露",      spec: "500ml",          price: 1090, sp: 29,  bp: 22 },
+      { id: "botalab-conditioner",    name: "絲蔻植護養髮液",      spec: "300ml",          price: 890,  sp: 23,  bp: 18 },
+      { id: "botalab-hair-oil",       name: "絲蔻植護魔髮精油",    spec: "100ml",          price: 1160, sp: 30,  bp: 23 },
+      { id: "botalab-body-wash",      name: "秀魅淨潤沐浴露",      spec: "500ml",          price: 990,  sp: 26,  bp: 20 },
+      { id: "botalab-body-cream",     name: "秀魅柔潤身體乳",      spec: "250ml",          price: 860,  sp: 23,  bp: 17 },
+      { id: "botalab-feminine-wash",  name: "秀魅私密植淨慕斯",    spec: "150ml",          price: 830,  sp: 22,  bp: 16 },
     ]
   },
   {
     id: "lifening",
     name: "來沛寧 LIFENING",
     products: [
-      { id: "lifening-collagen", name: "微分子膠原飲", spec: "25ml x 28瓶", price: 2980 },
-      { id: "lifening-energy", name: "活力超能飲", spec: "12g x 30包", price: 2980 },
-      { id: "lifening-shake", name: "隨型手搖蛋白飲", spec: "40g x 14包", price: 3490 },
+      { id: "lifening-collagen",      name: "微分子膠原飲",        spec: "25ml x 28瓶",   price: 2980, sp: 77,  bp: 60 },
+      { id: "lifening-energy",        name: "活力超能飲",          spec: "12g x 30包",    price: 2980, sp: 77,  bp: 60 },
+      { id: "lifening-shake",         name: "隨型手搖蛋白飲",      spec: "40g x 14包",    price: 3490, sp: 89,  bp: 70 },
     ]
   }
 ];
@@ -88,7 +88,10 @@ function renderProductRow(p) {
         <div class="product-name">${p.name}</div>
         <div class="product-spec">${p.spec}</div>
       </div>
-      <div class="product-price">NT$ ${p.price.toLocaleString()}</div>
+      <div class="product-price">
+        NT$ ${p.price.toLocaleString()}
+        <div class="product-spbp">SP ${p.sp} · BP ${p.bp}</div>
+      </div>
       <div class="qty-control">
         <button class="qty-btn minus" onclick="changeQty('${p.id}', -1)">&#8722;</button>
         <div class="qty-value" id="qty-${p.id}">0</div>
